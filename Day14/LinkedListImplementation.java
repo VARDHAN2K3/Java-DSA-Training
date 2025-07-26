@@ -82,6 +82,26 @@ class LinkedList {
         }
         temp.next = null;
     }
+    void deleteAtPos(int pos){
+        if(head == null){
+            System.out.println("Linked List is empty");
+            return;
+        }
+        if(pos == 1){
+            head = head.next;
+            return;
+        }
+        int cur = 1;
+        Node temp = head;
+        while(temp != null && cur < pos - 1){
+            temp = temp.next;
+            cur++;
+        }
+        if(pos < 1 || temp == null){
+            System.out.println("Invalid Position");
+        }
+        temp.next = temp.next.next;
+    }
     void display() {
         if (head == null) {
             System.out.println("LL is Empty");
@@ -113,6 +133,8 @@ public class LinkedListImplementation {
         ll.deleteFromBeg();
         ll.display();
         ll.deleteFromEnd();
+        ll.display();
+        ll.deleteAtPos(5);
         ll.display();
     }
 }

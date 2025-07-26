@@ -20,7 +20,7 @@ public class Main
 		int totalBalance = 0;
 		String name, phone, aadhar;
 		while(true){
-    		switch(choice) {
+    		switch(ch) {
     		case 1:
     			System.out.print("Enter your name:");
     			name = sc.next();
@@ -32,7 +32,7 @@ public class Main
     			break;
     		case 2:
                 System.out.print("Please Enter an amount to withdraw:");
-                int amount = s.nextInt();
+                int amount = sc.nextInt();
                 if(amount > totalBalance)   System.out.println("Insufficient Balance");
                 else{
                     totalBalance -= amount;
