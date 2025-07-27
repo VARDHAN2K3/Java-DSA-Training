@@ -134,7 +134,7 @@ public class LinkedListImplementation {
         ll.display();
         ll.deleteFromEnd();
         ll.display();
-        ll.deleteAtPos(5);
+        ll.deleteAtPos(6);
         ll.display();
     }
 }
